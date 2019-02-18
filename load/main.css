@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600");
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Open Sans", sans-serif;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+h1 span {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.collections {
+    display: block;
+    white-space: nowrap;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    height: 100vh;
+}
+
+.collections::-webkit-scrollbar {
+  display: none;
+}
+
+lazy-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 24px;
+    background-color: #fff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+lazy-image img {
+    position: relative;
+    z-index: 1;
+}
+
+lazy-image::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  border: 2px solid #e91e63;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-radius: 100%;
+  content: "";
+  animation: spinner 1s infinite ease;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
