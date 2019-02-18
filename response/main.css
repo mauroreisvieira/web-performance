@@ -20,43 +20,35 @@ h1 span {
   font-size: 1rem;
 }
 
-.collections {
+select {
+  margin: auto;
+  width: 200px;
   display: block;
-  white-space: nowrap;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  height: 100vh;
+  height: 40px;
 }
 
-.collections::-webkit-scrollbar {
-  display: none;
-}
-
-lazy-image {
+.box {
   position: relative;
-  display: inline-block;
-  overflow: hidden;
-  margin: 24px;
-  background-color: #fff;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 500px;
+  height: 500px;
+  background-color: #3f51b5;
 }
 
-lazy-image img {
-  position: relative;
-  z-index: 1;
+.box.altered {
+  background-color: #e91e63;
 }
 
-lazy-image::after {
+.box.spinner::after {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   margin: auto;
-  border: 2px solid #e91e63;
+  border: 10px solid #fff;
   border-right-color: transparent;
   border-left-color: transparent;
   border-radius: 100%;
