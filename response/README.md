@@ -2,7 +2,7 @@
 
 Implementation of Paul Lewis video.
 
-[![Web Performance - Response](https://img.youtube.com/vi/AkHdG7MNCY/0.jpg)](https://www.youtube.com/watch?v=AkHdG7MNCY)
+[![Web Performance - Response](https://img.youtube.com/vi/-AkHdG7MNCY/0.jpg)](https://www.youtube.com/watch?v=-AkHdG7MNCY)
 
 **See the demo:** [Web Performance - Response](https://mauroreisvieira.github.io/web-performance/response/index.html)
 
