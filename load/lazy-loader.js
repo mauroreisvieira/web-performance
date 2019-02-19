@@ -8,7 +8,7 @@ const io = new IntersectionObserver((entries) => {
         entry.target.visible = entry.isIntersecting;
     }
 });
-console.log(images);
+
 for (const image of images) {
     // if on screen
     io.observe(image);
@@ -19,7 +19,7 @@ for (const image of images) {
     }
 
     // or there is idle time
-    // requestIdleCallback(() => {
-    //     image.visible = true;
-    // });
+    requestIdleCallback(() => {
+        image.visible = true;
+    });
 }

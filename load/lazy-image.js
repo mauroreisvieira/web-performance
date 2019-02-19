@@ -9,7 +9,6 @@ export class LazyImage extends HTMLElement {
         this.loaded = false;
         this.src = null;
         this.img = new Image();
-        console.log(this.childNodes);
         this.img.onload = () => {
             this.loaded = true;
             for (const child of this.childNodes) {
@@ -20,14 +19,11 @@ export class LazyImage extends HTMLElement {
     }
 
     set visible(visible) {
-        console.log('visible', visible);
-        console.log(this.src);
         if (!this.src || !visible || this.loaded) return;
         this.img.src = this.src;
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        console.log('name', name);
         switch(name) {
             case 'src':
                 if (oldValue === newValue) break;
